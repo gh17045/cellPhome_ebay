@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    /*Agregando margenes al contenido de la pagina principal
+    padding: 80px 0px 0px;*/
+
+}
+.header{
+    background-color: #c9f42d;
+    height: 80px;
+   /* position: fixed;/*Fijar la barra */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between; /*Se muestr centrado*/
+    
+    /*Centrando el contenido de barra de navegacion*/
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+#nav_link_logo{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#nav_link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    
+}
+
+#carrito{
+    font-size: 30px;
+}
+#add{
+    font-size: 30px;
+}
+#nav_link_text{
+    display: none;
+}
+
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav_menu_item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px; /*Centrarlo en el eje Y*/
+    text-transform: uppercase;
+    width: max-content;
+}
+
+/*Agregado efecto*/
+.nav_menu_link, 
+.nav_menu_link_text{
+    padding: 8px 12px;
+    border-radius: 3px;
+
+}
+
+.nav_menu_link:hover{
+    background-color: #8eb716;
+    transition: 0.5ms;
+    
+}
+
+.nav-toggle{
+    color:black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+
+    display: none;
+}
+
+/*Haciendo el responsive de la pagina*/
+@media (max-width: 768px){
+    
+    body{
+       padding-top: 70px
+    
+    }
+    
+    .header{
+        height: 60px;
+    }
+    .main{
+        height: 300px;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    
+
+    #carrito{
+        display: none;
+    }
+    #add{
+        display: none;
+    }
+    #nav_link_text{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+
+    #nav_link{
+        color: white;
+    }
+    .nav-menu{
+        
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background: #060c01;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+    
+        /*Poniendo scroll a la barra responsive*/
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 0;/*Ocultado menu*/
+        transition: left 0.3s;
+    }
+    
+    .nav_menu_item{
+        line-height: 70px; /*Centrarlo en el eje Y*/
+    }
+    
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu-visible{
+        left: 100%;
+    }
+    /*Haciendo focus con tab*/
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    
+}

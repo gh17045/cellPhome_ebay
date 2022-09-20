@@ -10,12 +10,7 @@ body{
 
 }
 .header{
-    background-color: #c9f42d;
-    height: 80px;
-   /* position: fixed;/*Fijar la barra */
-    width: 100%;
-    top: 0;
-    left: 0;
+    background-color: #c9f42d
 }
 
 
@@ -47,12 +42,6 @@ body{
     
 }
 
-#carrito{
-    font-size: 30px;
-}
-#add{
-    font-size: 30px;
-}
 #nav_link_text{
     display: none;
 }

@@ -91,10 +91,6 @@ body{
 /*Haciendo el responsive de la pagina*/
 @media (max-width: 768px){
     
-    body{
-       padding-top: 70px
-    
-    }
     
     .header{
         height: 60px;
